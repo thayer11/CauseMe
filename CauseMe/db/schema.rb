@@ -11,9 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20161123003701) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "contributions", force: true do |t|
+    t.float    "time"
+    t.float    "time_frequency"
+    t.float    "money"
+    t.float    "money_frequency"
+    t.string   "life_choice_one"
+    t.string   "life_choice_two"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "organizations", force: true do |t|
+    t.string   "name"
+    t.integer  "phone_number"
+    t.string   "link_url"
+    t.string   "image_url"
+    t.string   "description"
+    t.string   "cause_category"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
