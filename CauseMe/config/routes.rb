@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-   get '/about_us', to: 'home#about_us'
+   
+  root to: "home#welcome"
+
+   get '/organizations', to: 'organizations#index'
+
 end
